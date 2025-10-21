@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>04. Lists</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .content {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .example-section {
+            background: #f9f9f9;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+        .note {
+            background: #e8f5e9;
+            padding: 15px;
+            border-left: 4px solid #4CAF50;
+            margin: 20px 0;
+        }
+        h1 {
+            color: #333;
+            border-bottom: 3px solid #4CAF50;
+            padding-bottom: 10px;
+        }
+        a {
+            display: inline-block;
+            margin-top: 20px;
+            color: #4CAF50;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        code {
+            background: #f5f5f5;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <h1>HTML Lists</h1>
+        
+        <p>HTML provides three types of lists to organize content: unordered lists, ordered lists, and description lists.</p>
+
+        <div class="example-section">
+            <h2>1. Unordered Lists (Bullet Points)</h2>
+            <p>Use <code>&lt;ul&gt;</code> for lists where order doesn't matter:</p>
+            
+            <h3>Shopping List:</h3>
+            <ul>
+                <li>Apples</li>
+                <li>Bananas</li>
+                <li>Oranges</li>
+                <li>Milk</li>
+            </ul>
+
+            <h3>Web Technologies:</h3>
+            <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+            </ul>
+        </div>
+
+        <div class="example-section">
+            <h2>2. Ordered Lists (Numbered)</h2>
+            <p>Use <code>&lt;ol&gt;</code> when order is important:</p>
+            
+            <h3>Recipe Steps:</h3>
+            <ol>
+                <li>Preheat the oven to 350°F</li>
+                <li>Mix flour, sugar, and eggs</li>
+                <li>Pour into baking pan</li>
+                <li>Bake for 30 minutes</li>
+                <li>Let cool and serve</li>
+            </ol>
+
+            <h3>Learning Path:</h3>
+            <ol>
+                <li>Learn HTML basics</li>
+                <li>Study CSS styling</li>
+                <li>Master JavaScript</li>
+                <li>Build projects</li>
+            </ol>
+        </div>
+
+        <div class="example-section">
+            <h2>3. Nested Lists</h2>
+            <p>You can put lists inside other lists:</p>
+            
+            <h3>Web Development Topics:</h3>
+            <ul>
+                <li>Frontend
+                    <ul>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>JavaScript</li>
+                    </ul>
+                </li>
+                <li>Backend
+                    <ul>
+                        <li>Node.js</li>
+                        <li>Python</li>
+                        <li>PHP</li>
+                    </ul>
+                </li>
+                <li>Database
+                    <ul>
+                        <li>MySQL</li>
+                        <li>MongoDB</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <div class="example-section">
+            <h2>4. Description Lists</h2>
+            <p>Use <code>&lt;dl&gt;</code> for term and description pairs:</p>
+            
+            <dl>
+                <dt><strong>HTML</strong></dt>
+                <dd>HyperText Markup Language - The structure of web pages</dd>
+                
+                <dt><strong>CSS</strong></dt>
+                <dd>Cascading Style Sheets - The styling of web pages</dd>
+                
+                <dt><strong>JavaScript</strong></dt>
+                <dd>Programming language for interactive web pages</dd>
+            </dl>
+        </div>
+
+        <div class="note">
+            <strong>Key Points:</strong>
+            <ul>
+                <li><code>&lt;ul&gt;</code> creates unordered (bulleted) lists</li>
+                <li><code>&lt;ol&gt;</code> creates ordered (numbered) lists</li>
+                <li><code>&lt;li&gt;</code> defines each list item</li>
+                <li><code>&lt;dl&gt;</code> creates description lists with <code>&lt;dt&gt;</code> (term) and <code>&lt;dd&gt;</code> (description)</li>
+                <li>Lists can be nested inside each other</li>
+            </ul>
+        </div>
+
+        <a href="03-links-images.html">← Previous: Links & Images</a>
+        <a href="05-text-formatting.html" style="float: right;">Next: Text Formatting →</a>
+    </div>
+</body>
+</html>

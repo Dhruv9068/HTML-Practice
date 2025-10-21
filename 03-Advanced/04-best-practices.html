@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>04. HTML Best Practices</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1000px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .content {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #333;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 10px;
+        }
+        h2 {
+            color: #667eea;
+            margin-top: 30px;
+        }
+        .example-section {
+            background: #f9f9f9;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+        .note {
+            background: #e8f5e9;
+            padding: 15px;
+            border-left: 4px solid #4CAF50;
+            margin: 20px 0;
+        }
+        .warning {
+            background: #fff3cd;
+            padding: 15px;
+            border-left: 4px solid #ffc107;
+            margin: 20px 0;
+        }
+        .comparison {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin: 20px 0;
+        }
+        .comparison-box {
+            background: #f9f9f9;
+            padding: 15px;
+            border-radius: 5px;
+        }
+        .comparison-box.bad {
+            border: 2px solid #f44336;
+        }
+        .comparison-box.good {
+            border: 2px solid #4CAF50;
+        }
+        pre {
+            background: #f5f5f5;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+            border-left: 3px solid #667eea;
+        }
+        code {
+            background: #f5f5f5;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+        }
+        a {
+            color: #667eea;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .checklist {
+            background: white;
+            border: 2px solid #667eea;
+            border-radius: 5px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        .checklist h3 {
+            color: #667eea;
+            margin-top: 0;
+        }
+        .checklist li {
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <h1>HTML Best Practices</h1>
+        
+        <p>Following these best practices will help you write clean, maintainable, and performant HTML code that works across all browsers and devices.</p>
+
+        <div class="example-section">
+            <h2>1. Always Use DOCTYPE</h2>
+            
+            <div class="comparison">
+                <div class="comparison-box bad">
+                    <h3>❌ Bad</h3>
+                    <pre><code>&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;Page&lt;/title&gt;
+&lt;/head&gt;</code></pre>
+                </div>
+
+                <div class="comparison-box good">
+                    <h3>✅ Good</h3>
+                    <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;title&gt;Page&lt;/title&gt;
+&lt;/head&gt;</code></pre>
+                </div>
+            </div>
+            <p>Always declare <code>&lt;!DOCTYPE html&gt;</code> at the beginning to ensure standards mode rendering.</p>
+        </div>
+
+        <div class="example-section">
+            <h2>2. Use Semantic HTML</h2>
+            
+            <div class="comparison">
+                <div class="comparison-box bad">
+                    <h3>❌ Bad</h3>
+                    <pre><code>&lt;div id="header"&gt;
+    &lt;div id="nav"&gt;...&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id="main"&gt;
+    &lt;div class="post"&gt;...&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                </div>
+
+                <div class="comparison-box good">
+                    <h3>✅ Good</h3>
+                    <pre><code>&lt;header&gt;
+    &lt;nav&gt;...&lt;/nav&gt;
+&lt;/header&gt;
+&lt;main&gt;
+    &lt;article&gt;...&lt;/article&gt;
+&lt;/main&gt;</code></pre>
+                </div>
+            </div>
+            <p>Use semantic elements like <code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;main&gt;</code>, <code>&lt;article&gt;</code> instead of generic divs.</p>
+        </div>
+
+        <div class="example-section">
+            <h2>3. Close All Tags</h2>
+            
+            <div class="comparison">
+                <div class="comparison-box bad">
+                    <h3>❌ Bad</h3>
+                    <pre><code>&lt;p&gt;Paragraph 1
+&lt;p&gt;Paragraph 2
+&lt;li&gt;Item 1
+&lt;li&gt;Item 2</code></pre>
+                </div>
+
+                <div class="comparison-box good">
+                    <h3>✅ Good</h3>
+                    <pre><code>&lt;p&gt;Paragraph 1&lt;/p&gt;
+&lt;p&gt;Paragraph 2&lt;/p&gt;
+&lt;li&gt;Item 1&lt;/li&gt;
+&lt;li&gt;Item 2&lt;/li&gt;</code></pre>
+                </div>
+            </div>
+            <p>Always close your HTML tags properly. Self-closing tags like <code>&lt;img&gt;</code>, <code>&lt;br&gt;</code>, <code>&lt;input&gt;</code> don't need closing tags.</p>
+        </div>
+
+        <div class="example-section">
+            <h2>4. Use Lowercase for Tags and Attributes</h2>
+            
+            <div class="comparison">
+                <div class="comparison-box bad">
+                    <h3>❌ Bad</h3>
+                    <pre><code>&lt;DIV CLASS="container"&gt;
+    &lt;A HREF="page.html"&gt;Link&lt;/A&gt;
+&lt;/DIV&gt;</code></pre>
+                </div>
+
+                <div class="comparison-box good">
+                    <h3>✅ Good</h3>
+                    <pre><code>&lt;div class="container"&gt;
+    &lt;a href="page.html"&gt;Link&lt;/a&gt;
+&lt;/div&gt;</code></pre>
+                </div>
+            </div>
+            <p>HTML tags and attributes should be lowercase for better readability and consistency.</p>
+        </div>
+
+        <div class="example-section">
+            <h2>5. Quote Attribute Values</h2>
+            
+            <div class="comparison">
+                <div class="comparison-box bad">
+                    <h3>❌ Bad</h3>
+                    <pre><code>&lt;img src=image.jpg alt=My Image&gt;
+&lt;div class=container&gt;</code></pre>
+                </div>
+
+                <div class="comparison-box good">
+                    <h3>✅ Good</h3>
+                    <pre><code>&lt;img src="image.jpg" alt="My Image"&gt;
+&lt;div class="container"&gt;</code></pre>
+                </div>
+            </div>
+            <p>Always use quotes around attribute values. Use double quotes for consistency.</p>
+        </div>
+
+        <div class="example-section">
+            <h2>6. Include Alt Text for Images</h2>
+            
+            <div class="comparison">
+                <div class="comparison-box bad">
+                    <h3>❌ Bad</h3>
+                    <pre><code>&lt;img src="logo.png"&gt;
+&lt;img src="photo.jpg" alt=""&gt;</code></pre>
+                </div>
+
+                <div class="comparison-box good">
+                    <h3>✅ Good</h3>
+                    <pre><code>&lt;img src="logo.png" alt="Company Logo"&gt;
+&lt;img src="photo.jpg" alt="Team photo at conference"&gt;</code></pre>
+                </div>
+            </div>
+            <p>Always include meaningful alt text for accessibility and SEO. Use <code>alt=""</code> only for decorative images.</p>
+        </div>
+
+        <div class="example-section">
+            <h2>7. Use Proper Document Structure</h2>
+            
+            <div class="note">
+                <h3>Essential Elements:</h3>
+                <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Page Title&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;!-- Your content here --&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+            </div>
+        </div>
+
+        <div class="example-section">
+            <h2>8. Separate Content from Presentation</h2>
+            
+            <div class="comparison">
+                <div class="comparison-box bad">
+                    <h3>❌ Bad (Inline Styles)</h3>
+                    <pre><code>&lt;p style="color: red; font-size: 16px;"&gt;
+    Text
+&lt;/p&gt;</code></pre>
+                </div>
+
+                <div class="comparison-box good">
+                    <h3>✅ Good (External CSS)</h3>
+                    <pre><code>&lt;!-- HTML --&gt;
+&lt;p class="error-message"&gt;Text&lt;/p&gt;
+
+&lt;!-- CSS --&gt;
+.error-message {
+    color: red;
+    font-size: 16px;
+}</code></pre>
+                </div>
+            </div>
+            <p>Keep HTML for structure, CSS for styling, and JavaScript for behavior.</p>
+        </div>
+
+        <div class="example-section">
+            <h2>9. Optimize Performance</h2>
+            
+            <h3>Load CSS in &lt;head&gt;</h3>
+            <pre><code>&lt;head&gt;
+    &lt;link rel="stylesheet" href="styles.css"&gt;
+&lt;/head&gt;</code></pre>
+
+            <h3>Load JavaScript Before &lt;/body&gt;</h3>
+            <pre><code>&lt;body&gt;
+    &lt;!-- Content --&gt;
+    
+    &lt;script src="script.js"&gt;&lt;/script&gt;
+&lt;/body&gt;</code></pre>
+
+            <p>Or use <code>defer</code> or <code>async</code> attributes:</p>
+            <pre><code>&lt;script src="script.js" defer&gt;&lt;/script&gt;
+&lt;script src="analytics.js" async&gt;&lt;/script&gt;</code></pre>
+        </div>
+
+        <div class="example-section">
+            <h2>10. Use Meaningful IDs and Classes</h2>
+            
+            <div class="comparison">
+                <div class="comparison-box bad">
+                    <h3>❌ Bad</h3>
+                    <pre><code>&lt;div class="red big"&gt;...&lt;/div&gt;
+&lt;div id="div1"&gt;...&lt;/div&gt;</code></pre>
+                </div>
+
+                <div class="comparison-box good">
+                    <h3>✅ Good</h3>
+                    <pre><code>&lt;div class="alert-error"&gt;...&lt;/div&gt;
+&lt;div id="user-profile"&gt;...&lt;/div&gt;</code></pre>
+                </div>
+            </div>
+            <p>Use descriptive names that describe purpose, not appearance.</p>
+        </div>
+
+        <div class="example-section">
+            <h2>11. Validate Your HTML</h2>
+            <ul>
+                <li>Use the <a href="https://validator.w3.org/" target="_blank">W3C Markup Validator</a></li>
+                <li>Check for syntax errors and warnings</li>
+                <li>Ensure proper nesting of elements</li>
+                <li>Verify all attributes are valid</li>
+            </ul>
+        </div>
+
+        <div class="example-section">
+            <h2>12. Maintain Consistent Indentation</h2>
+            
+            <div class="comparison">
+                <div class="comparison-box bad">
+                    <h3>❌ Bad</h3>
+                    <pre><code>&lt;div&gt;
+&lt;h1&gt;Title&lt;/h1&gt;
+&lt;p&gt;Text&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Item&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;</code></pre>
+                </div>
+
+                <div class="comparison-box good">
+                    <h3>✅ Good</h3>
+                    <pre><code>&lt;div&gt;
+    &lt;h1&gt;Title&lt;/h1&gt;
+    &lt;p&gt;Text&lt;/p&gt;
+    &lt;ul&gt;
+        &lt;li&gt;Item&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;</code></pre>
+                </div>
+            </div>
+            <p>Use consistent indentation (2 or 4 spaces) for better readability.</p>
+        </div>
+
+        <div class="example-section">
+            <h2>13. Comment Your Code</h2>
+            <pre><code>&lt;!-- Navigation Section --&gt;
+&lt;nav&gt;
+    &lt;!-- Main menu items --&gt;
+    &lt;ul&gt;
+        &lt;li&gt;&lt;a href="/"&gt;Home&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="/about"&gt;About&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/nav&gt;
+
+&lt;!-- End Navigation --&gt;</code></pre>
+            <p>Use comments to explain complex sections, but don't over-comment obvious code.</p>
+        </div>
+
+        <div class="example-section">
+            <h2>14. Don't Use Deprecated Elements</h2>
+            
+            <h3>Avoid These:</h3>
+            <ul>
+                <li><code>&lt;font&gt;</code> - Use CSS instead</li>
+                <li><code>&lt;center&gt;</code> - Use CSS text-align</li>
+                <li><code>&lt;marquee&gt;</code> - Use CSS animations</li>
+                <li><code>&lt;blink&gt;</code> - Use CSS animations</li>
+                <li><code>&lt;frame&gt;</code> - Use modern layout techniques</li>
+            </ul>
+        </div>
+
+        <div class="checklist">
+            <h3>📋 HTML Best Practices Checklist</h3>
+            <ul>
+                <li>✓ Declare DOCTYPE at the beginning</li>
+                <li>✓ Specify language with <code>lang</code> attribute</li>
+                <li>✓ Include charset meta tag</li>
+                <li>✓ Add viewport meta tag for responsive design</li>
+                <li>✓ Use semantic HTML5 elements</li>
+                <li>✓ Close all tags properly</li>
+                <li>✓ Use lowercase for tags and attributes</li>
+                <li>✓ Quote all attribute values</li>
+                <li>✓ Include alt text for images</li>
+                <li>✓ Label all form inputs</li>
+                <li>✓ Maintain proper heading hierarchy</li>
+                <li>✓ Separate content from presentation</li>
+                <li>✓ Optimize page load performance</li>
+                <li>✓ Validate your HTML</li>
+                <li>✓ Make your site accessible</li>
+                <li>✓ Use meaningful IDs and classes</li>
+                <li>✓ Maintain consistent code formatting</li>
+                <li>✓ Comment complex sections</li>
+                <li>✓ Test across different browsers</li>
+                <li>✓ Ensure mobile responsiveness</li>
+            </ul>
+        </div>
+
+        <div class="warning">
+            <h3>⚠️ Common Mistakes to Avoid</h3>
+            <ul>
+                <li>Using tables for layout (use CSS Grid or Flexbox instead)</li>
+                <li>Forgetting to close tags</li>
+                <li>Using inline styles excessively</li>
+                <li>Not testing on mobile devices</li>
+                <li>Ignoring accessibility</li>
+                <li>Missing alt attributes on images</li>
+                <li>Not validating HTML</li>
+                <li>Using deprecated elements</li>
+                <li>Poor or missing meta tags</li>
+                <li>Not optimizing images</li>
+            </ul>
+        </div>
+
+        <div class="note">
+            <h3>🛠️ Recommended Tools</h3>
+            <ul>
+                <li><strong>Code Editors:</strong> VS Code, Sublime Text, Atom</li>
+                <li><strong>Validators:</strong> W3C Markup Validator, HTML Hint</li>
+                <li><strong>Browser DevTools:</strong> Chrome DevTools, Firefox DevTools</li>
+                <li><strong>Accessibility:</strong> WAVE, axe DevTools, Lighthouse</li>
+                <li><strong>Performance:</strong> Google PageSpeed Insights, GTmetrix</li>
+            </ul>
+        </div>
+
+        <div class="example-section">
+            <h2>Conclusion</h2>
+            <p>Following these best practices will help you write better HTML code that is:</p>
+            <ul>
+                <li>✓ Easier to maintain</li>
+                <li>✓ More accessible</li>
+                <li>✓ Better for SEO</li>
+                <li>✓ More performant</li>
+                <li>✓ Cross-browser compatible</li>
+            </ul>
+            <p>Remember: Good HTML is the foundation of a great website!</p>
+        </div>
+
+        <p style="margin-top: 40px;">
+            <a href="03-accessibility.html">← Previous: Accessibility</a>
+            <a href="../index.html" style="float: right;">Back to Home →</a>
+        </p>
+    </div>
+</body>
+</html>

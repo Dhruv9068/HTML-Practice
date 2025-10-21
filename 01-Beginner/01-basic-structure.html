@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>01. Basic HTML Structure</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .content {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #333;
+            border-bottom: 3px solid #4CAF50;
+            padding-bottom: 10px;
+        }
+        .code-explanation {
+            background: #f9f9f9;
+            padding: 15px;
+            border-left: 4px solid #4CAF50;
+            margin: 20px 0;
+        }
+        .highlight {
+            background-color: #fff3cd;
+            padding: 2px 5px;
+            border-radius: 3px;
+        }
+        a {
+            display: inline-block;
+            margin-top: 20px;
+            color: #4CAF50;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <h1>Basic HTML Structure</h1>
+        
+        <p>Every HTML document follows a basic structure. Let's understand each part:</p>
+
+        <div class="code-explanation">
+            <h2>HTML Document Structure:</h2>
+            <ul>
+                <li><strong>&lt;!DOCTYPE html&gt;</strong> - Declares this is an HTML5 document</li>
+                <li><strong>&lt;html&gt;</strong> - The root element of an HTML page</li>
+                <li><strong>&lt;head&gt;</strong> - Contains meta information about the document</li>
+                <li><strong>&lt;title&gt;</strong> - Specifies the title shown in the browser tab</li>
+                <li><strong>&lt;body&gt;</strong> - Contains the visible page content</li>
+            </ul>
+        </div>
+
+        <h2>Essential Head Elements:</h2>
+        <ul>
+            <li><span class="highlight">&lt;meta charset="UTF-8"&gt;</span> - Sets character encoding to support all languages</li>
+            <li><span class="highlight">&lt;meta name="viewport"&gt;</span> - Makes the page responsive on mobile devices</li>
+            <li><span class="highlight">&lt;title&gt;</span> - Page title that appears in browser tab</li>
+        </ul>
+
+        <h2>Why This Structure Matters:</h2>
+        <p>This basic structure is the foundation of every web page. The DOCTYPE tells browsers to use modern standards, the head contains metadata, and the body contains everything users see.</p>
+
+        <p><strong>Try This:</strong> View the source code of this page (right-click → View Page Source) to see this structure in action!</p>
+
+        <a href="../index.html">← Back to Home</a>
+        <a href="02-headings-paragraphs.html" style="float: right;">Next: Headings & Paragraphs →</a>
+    </div>
+</body>
+</html>

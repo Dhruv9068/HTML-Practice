@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>05. Text Formatting</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .content {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .example-section {
+            background: #f9f9f9;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+        .note {
+            background: #e3f2fd;
+            padding: 15px;
+            border-left: 4px solid #2196F3;
+            margin: 20px 0;
+        }
+        h1 {
+            color: #333;
+            border-bottom: 3px solid #4CAF50;
+            padding-bottom: 10px;
+        }
+        a {
+            display: inline-block;
+            margin-top: 20px;
+            color: #4CAF50;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <h1>Text Formatting in HTML</h1>
+        
+        <p>HTML provides various tags to format text and give it different meanings.</p>
+
+        <div class="example-section">
+            <h2>Common Text Formatting Tags</h2>
+            
+            <p><strong>Bold text</strong> - Created with &lt;strong&gt; (semantic) or &lt;b&gt; (visual only)</p>
+            
+            <p><em>Italic text</em> - Created with &lt;em&gt; (semantic) or &lt;i&gt; (visual only)</p>
+            
+            <p><u>Underlined text</u> - Created with &lt;u&gt;</p>
+            
+            <p><mark>Highlighted text</mark> - Created with &lt;mark&gt;</p>
+            
+            <p><small>Smaller text</small> - Created with &lt;small&gt;</p>
+            
+            <p><del>Deleted text</del> - Created with &lt;del&gt;</p>
+            
+            <p><ins>Inserted text</ins> - Created with &lt;ins&gt;</p>
+            
+            <p>This is <sub>subscript</sub> text - Created with &lt;sub&gt;</p>
+            
+            <p>This is <sup>superscript</sup> text - Created with &lt;sup&gt;</p>
+        </div>
+
+        <div class="example-section">
+            <h2>Code and Preformatted Text</h2>
+            
+            <p>Use <code>&lt;code&gt;</code> for inline code: <code>let x = 10;</code></p>
+            
+            <p>Use <code>&lt;pre&gt;</code> for preformatted text that preserves spaces and line breaks:</p>
+            
+            <pre>
+function greet() {
+    console.log("Hello World!");
+    return true;
+}
+            </pre>
+        </div>
+
+        <div class="example-section">
+            <h2>Quotations</h2>
+            
+            <p>Short inline quote: <q>To be or not to be</q></p>
+            
+            <blockquote>
+                This is a longer quotation that appears in a block. It's created with the &lt;blockquote&gt; tag and is typically indented by browsers.
+            </blockquote>
+            
+            <p>Citation example: <cite>The Great Gatsby</cite> by F. Scott Fitzgerald</p>
+        </div>
+
+        <div class="example-section">
+            <h2>Abbreviations and Definitions</h2>
+            
+            <p>The <abbr title="World Wide Web">WWW</abbr> was created in 1989.</p>
+            
+            <p>The <dfn>HTML</dfn> is the standard markup language for web pages.</p>
+        </div>
+
+        <div class="example-section">
+            <h2>Text Formatting Summary Table</h2>
+            
+            <table>
+                <thead>
+                    <tr>
+                        <th>Tag</th>
+                        <th>Purpose</th>
+                        <th>Example</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>&lt;strong&gt;</td>
+                        <td>Important text (bold)</td>
+                        <td><strong>Important!</strong></td>
+                    </tr>
+                    <tr>
+                        <td>&lt;em&gt;</td>
+                        <td>Emphasized text (italic)</td>
+                        <td><em>Emphasis</em></td>
+                    </tr>
+                    <tr>
+                        <td>&lt;mark&gt;</td>
+                        <td>Highlighted text</td>
+                        <td><mark>Highlighted</mark></td>
+                    </tr>
+                    <tr>
+                        <td>&lt;code&gt;</td>
+                        <td>Computer code</td>
+                        <td><code>code</code></td>
+                    </tr>
+                    <tr>
+                        <td>&lt;del&gt;</td>
+                        <td>Deleted text</td>
+                        <td><del>deleted</del></td>
+                    </tr>
+                    <tr>
+                        <td>&lt;ins&gt;</td>
+                        <td>Inserted text</td>
+                        <td><ins>inserted</ins></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="note">
+            <strong>Semantic vs Visual:</strong>
+            <p>Use semantic tags like <code>&lt;strong&gt;</code> and <code>&lt;em&gt;</code> instead of <code>&lt;b&gt;</code> and <code>&lt;i&gt;</code> when possible. Semantic tags convey meaning to search engines and screen readers, not just visual styling.</p>
+        </div>
+
+        <a href="04-lists.html">← Previous: Lists</a>
+        <a href="../02-Intermediate/01-tables.html" style="float: right;">Next: Tables (Intermediate) →</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="HTML Practice Repository - Learn HTML from Beginner to Advanced">
+    <meta name="author" content="Dhruv9068">
+    <title>HTML Practice - From Beginner to Advanced</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+            padding: 40px;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            border-bottom: 3px solid #667eea;
+        }
+        h1 {
+            color: #333;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        .subtitle {
+            color: #666;
+            font-size: 1.2em;
+        }
+        .intro {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            border-left: 4px solid #667eea;
+        }
+        .section {
+            margin-bottom: 40px;
+        }
+        h2 {
+            color: #667eea;
+            margin-bottom: 15px;
+            font-size: 1.8em;
+        }
+        .level-card {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .level-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+        h3 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+        .example-list {
+            list-style: none;
+            padding-left: 0;
+        }
+        .example-list li {
+            padding: 8px 0;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        .example-list li:last-child {
+            border-bottom: none;
+        }
+        .example-list a {
+            color: #667eea;
+            text-decoration: none;
+            display: block;
+            transition: padding-left 0.3s ease;
+        }
+        .example-list a:hover {
+            padding-left: 10px;
+            color: #764ba2;
+        }
+        .badge {
+            display: inline-block;
+            padding: 3px 10px;
+            border-radius: 15px;
+            font-size: 0.8em;
+            margin-left: 10px;
+            font-weight: bold;
+        }
+        .beginner {
+            background: #d4edda;
+            color: #155724;
+        }
+        .intermediate {
+            background: #fff3cd;
+            color: #856404;
+        }
+        .advanced {
+            background: #f8d7da;
+            color: #721c24;
+        }
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 2px solid #e0e0e0;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🚀 HTML Practice Repository</h1>
+            <p class="subtitle">From Beginner to Advanced</p>
+        </header>
+
+        <div class="intro">
+            <p><strong>Welcome!</strong> This repository is your comprehensive guide to learning HTML. Whether you're just starting out or looking to master advanced concepts, you'll find organized examples and tutorials to help you on your journey.</p>
+        </div>
+
+        <div class="section">
+            <h2>📚 Learning Path</h2>
+            
+            <div class="level-card">
+                <h3>🌱 Beginner Level <span class="badge beginner">Start Here</span></h3>
+                <p>Master the fundamentals of HTML with these essential topics:</p>
+                <ul class="example-list">
+                    <li><a href="01-Beginner/01-basic-structure.html">01. Basic HTML Structure</a></li>
+                    <li><a href="01-Beginner/02-headings-paragraphs.html">02. Headings and Paragraphs</a></li>
+                    <li><a href="01-Beginner/03-links-images.html">03. Links and Images</a></li>
+                    <li><a href="01-Beginner/04-lists.html">04. Lists (Ordered & Unordered)</a></li>
+                    <li><a href="01-Beginner/05-text-formatting.html">05. Text Formatting</a></li>
+                </ul>
+            </div>
+
+            <div class="level-card">
+                <h3>📊 Intermediate Level <span class="badge intermediate">Level Up</span></h3>
+                <p>Build on your foundation with more complex HTML elements:</p>
+                <ul class="example-list">
+                    <li><a href="02-Intermediate/01-tables.html">01. HTML Tables</a></li>
+                    <li><a href="02-Intermediate/02-forms.html">02. Forms and Input Elements</a></li>
+                    <li><a href="02-Intermediate/03-multimedia.html">03. Audio and Video (Multimedia)</a></li>
+                    <li><a href="02-Intermediate/04-div-span.html">04. Div and Span Elements</a></li>
+                </ul>
+            </div>
+
+            <div class="level-card">
+                <h3>🎯 Advanced Level <span class="badge advanced">Master It</span></h3>
+                <p>Take your HTML skills to the next level with modern best practices:</p>
+                <ul class="example-list">
+                    <li><a href="03-Advanced/01-semantic-html.html">01. Semantic HTML5 Elements</a></li>
+                    <li><a href="03-Advanced/02-meta-tags.html">02. Meta Tags and SEO</a></li>
+                    <li><a href="03-Advanced/03-accessibility.html">03. Accessibility (ARIA)</a></li>
+                    <li><a href="03-Advanced/04-best-practices.html">04. HTML Best Practices</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>💡 How to Use</h2>
+            <ol>
+                <li>Start with the beginner section if you're new to HTML</li>
+                <li>Click on any link to view the example in your browser</li>
+                <li>Right-click and "View Page Source" to see the HTML code</li>
+                <li>Practice by modifying the examples</li>
+                <li>Progress through the levels at your own pace</li>
+            </ol>
+        </div>
+
+        <footer>
+            <p>Created with ❤️ by Dhruv9068</p>
+            <p>Happy Learning! 🎉</p>
+        </footer>
+    </div>
+</body>
+</html>

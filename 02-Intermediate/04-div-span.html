@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>04. Div and Span Elements</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 900px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .content {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #333;
+            border-bottom: 3px solid #ff9800;
+            padding-bottom: 10px;
+        }
+        .example-section {
+            background: #f9f9f9;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+        .note {
+            background: #fff3cd;
+            padding: 15px;
+            border-left: 4px solid #ffc107;
+            margin: 20px 0;
+        }
+        /* Example styling for div elements */
+        .box {
+            background-color: #e3f2fd;
+            border: 2px solid #2196F3;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 5px;
+        }
+        .container {
+            background-color: #f3e5f5;
+            border: 2px dashed #9c27b0;
+            padding: 20px;
+            margin: 10px 0;
+        }
+        .card {
+            background: white;
+            border: 1px solid #ddd;
+            padding: 15px;
+            margin: 10px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            display: inline-block;
+            width: calc(33.333% - 22px);
+            vertical-align: top;
+        }
+        /* Example styling for span elements */
+        .highlight {
+            background-color: yellow;
+            padding: 2px 5px;
+        }
+        .important {
+            color: red;
+            font-weight: bold;
+        }
+        .label {
+            background-color: #4CAF50;
+            color: white;
+            padding: 3px 8px;
+            border-radius: 3px;
+            font-size: 0.9em;
+        }
+        a {
+            display: inline-block;
+            margin-top: 20px;
+            color: #ff9800;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        code {
+            background: #f5f5f5;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <h1>Div and Span Elements</h1>
+        
+        <p>The <code>&lt;div&gt;</code> and <code>&lt;span&gt;</code> elements are generic containers used to group and style content. They have no semantic meaning but are essential for layout and styling.</p>
+
+        <div class="example-section">
+            <h2>The &lt;div&gt; Element (Block-Level)</h2>
+            <p>The <code>&lt;div&gt;</code> element is a <strong>block-level</strong> container. It starts on a new line and takes up the full width available.</p>
+            
+            <div class="box">
+                <h3>Box 1</h3>
+                <p>This is content inside a div element with a blue border.</p>
+            </div>
+
+            <div class="box">
+                <h3>Box 2</h3>
+                <p>Each div starts on a new line and stretches to fill the available width.</p>
+            </div>
+
+            <div class="box">
+                <h3>Box 3</h3>
+                <p>Divs are commonly used to create sections and layout structures.</p>
+            </div>
+        </div>
+
+        <div class="note">
+            <strong>Div Characteristics:</strong>
+            <ul>
+                <li>Block-level element</li>
+                <li>Takes up the full width available</li>
+                <li>Always starts on a new line</li>
+                <li>Can contain other block and inline elements</li>
+                <li>Used for grouping larger sections of content</li>
+            </ul>
+        </div>
+
+        <div class="example-section">
+            <h2>Nested Divs</h2>
+            <p>Divs can be nested inside each other to create complex layouts:</p>
+            
+            <div class="container">
+                <h3>Parent Container</h3>
+                <div class="box">
+                    <h4>Child Div 1</h4>
+                    <p>This div is inside the parent container.</p>
+                </div>
+                <div class="box">
+                    <h4>Child Div 2</h4>
+                    <p>You can nest divs as deeply as needed.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="example-section">
+            <h2>Using Divs for Layout</h2>
+            <p>Divs are commonly used to create card layouts:</p>
+            
+            <div class="card">
+                <h3>Card 1</h3>
+                <p>This is a card created with a div element and CSS.</p>
+            </div>
+
+            <div class="card">
+                <h3>Card 2</h3>
+                <p>Cards can be arranged horizontally using CSS.</p>
+            </div>
+
+            <div class="card">
+                <h3>Card 3</h3>
+                <p>Divs make it easy to create reusable components.</p>
+            </div>
+        </div>
+
+        <div class="example-section">
+            <h2>The &lt;span&gt; Element (Inline)</h2>
+            <p>The <code>&lt;span&gt;</code> element is an <strong>inline</strong> container. It doesn't start on a new line and only takes up as much width as necessary.</p>
+            
+            <p>
+                This is a paragraph with <span class="highlight">highlighted text</span> using a span element.
+                You can <span class="important">emphasize important words</span> without breaking the flow of text.
+                Spans are <span class="label">perfect</span> for styling small portions of text.
+            </p>
+
+            <p>
+                Multiple spans in one sentence: 
+                <span style="color: red;">Red</span>, 
+                <span style="color: blue;">Blue</span>, 
+                <span style="color: green;">Green</span> text.
+            </p>
+        </div>
+
+        <div class="note">
+            <strong>Span Characteristics:</strong>
+            <ul>
+                <li>Inline element</li>
+                <li>Only takes up as much width as needed</li>
+                <li>Does not start on a new line</li>
+                <li>Can only contain other inline elements and text</li>
+                <li>Used for styling small portions of text</li>
+            </ul>
+        </div>
+
+        <div class="example-section">
+            <h2>Practical Examples</h2>
+            
+            <h3>Example 1: User Profile Card</h3>
+            <div class="box">
+                <h4>John Doe</h4>
+                <p><span class="label">Developer</span> <span class="label">Designer</span></p>
+                <p>Email: <span style="color: #2196F3;">john@example.com</span></p>
+                <p>Location: <span style="color: #4CAF50;">New York, USA</span></p>
+            </div>
+
+            <h3>Example 2: Status Messages</h3>
+            <p>
+                Status: <span style="color: green; font-weight: bold;">Active</span> | 
+                Priority: <span style="color: orange; font-weight: bold;">Medium</span> | 
+                Progress: <span style="color: blue; font-weight: bold;">75%</span>
+            </p>
+
+            <h3>Example 3: Code Highlighting</h3>
+            <p>
+                To print in JavaScript, use: <code><span style="color: purple;">console</span>.<span style="color: blue;">log</span>(<span style="color: green;">"Hello World"</span>);</code>
+            </p>
+        </div>
+
+        <div class="note">
+            <strong>Div vs Span - When to Use:</strong>
+            <ul>
+                <li><strong>Use div</strong> for:
+                    <ul>
+                        <li>Creating sections, containers, and layout structures</li>
+                        <li>Grouping multiple elements together</li>
+                        <li>Building page components like headers, footers, sidebars</li>
+                    </ul>
+                </li>
+                <li><strong>Use span</strong> for:
+                    <ul>
+                        <li>Styling small portions of text</li>
+                        <li>Adding classes or IDs to inline content</li>
+                        <li>Applying JavaScript events to specific text</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <div class="note">
+            <strong>Best Practices:</strong>
+            <ul>
+                <li>Use semantic HTML5 elements when possible instead of div (e.g., <code>&lt;section&gt;</code>, <code>&lt;article&gt;</code>, <code>&lt;header&gt;</code>)</li>
+                <li>Give divs meaningful class names or IDs for easier CSS and JavaScript targeting</li>
+                <li>Don't overuse divs - keep your HTML structure simple and clean</li>
+                <li>Use span for inline styling only when semantic elements don't fit</li>
+            </ul>
+        </div>
+
+        <a href="03-multimedia.html">← Previous: Multimedia</a>
+        <a href="../03-Advanced/01-semantic-html.html" style="float: right;">Next: Semantic HTML (Advanced) →</a>
+    </div>
+</body>
+</html>

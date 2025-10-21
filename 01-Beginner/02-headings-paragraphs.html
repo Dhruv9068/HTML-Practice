@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>02. Headings and Paragraphs</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .content {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .example-section {
+            background: #f9f9f9;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+        .note {
+            background: #e3f2fd;
+            padding: 15px;
+            border-left: 4px solid #2196F3;
+            margin: 20px 0;
+        }
+        a {
+            display: inline-block;
+            margin-top: 20px;
+            color: #4CAF50;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <h1>Headings and Paragraphs</h1>
+        
+        <p>HTML provides six levels of headings (h1 to h6) and paragraph tags to structure your text content.</p>
+
+        <div class="example-section">
+            <h2>Heading Examples</h2>
+            
+            <h1>This is a Heading 1 (h1)</h1>
+            <h2>This is a Heading 2 (h2)</h2>
+            <h3>This is a Heading 3 (h3)</h3>
+            <h4>This is a Heading 4 (h4)</h4>
+            <h5>This is a Heading 5 (h5)</h5>
+            <h6>This is a Heading 6 (h6)</h6>
+        </div>
+
+        <div class="note">
+            <strong>Important:</strong> h1 is the largest and most important heading, while h6 is the smallest. Use h1 only once per page for the main title.
+        </div>
+
+        <h2>Paragraphs</h2>
+        <p>The <strong>&lt;p&gt;</strong> tag defines a paragraph. Browsers automatically add space before and after paragraphs.</p>
+
+        <p>This is the first paragraph. It contains some text to demonstrate how paragraphs work in HTML. Notice how there's space between this and the next paragraph.</p>
+
+        <p>This is the second paragraph. You can have as many paragraphs as you need. Each paragraph is wrapped in &lt;p&gt; tags.</p>
+
+        <h2>Line Breaks</h2>
+        <p>Sometimes you want a line break without starting a new paragraph.<br>
+        You can use the &lt;br&gt; tag for this.<br>
+        Like this!</p>
+
+        <h2>Horizontal Rule</h2>
+        <p>The &lt;hr&gt; tag creates a horizontal line to separate content:</p>
+        <hr>
+        <p>Content after the horizontal rule.</p>
+
+        <div class="note">
+            <strong>Best Practice:</strong> Use headings to create a hierarchical structure for your content. This helps with SEO and accessibility.
+        </div>
+
+        <a href="01-basic-structure.html">← Previous: Basic Structure</a>
+        <a href="03-links-images.html" style="float: right;">Next: Links & Images →</a>
+    </div>
+</body>
+</html>
